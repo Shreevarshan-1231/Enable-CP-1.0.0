@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Enable CP",
+  "version": "1.0.0",
+  "description": "Unlock copy, paste, right-click, and text selection on restricted websites. Includes offline OCR for English and Tamil. By S.Shreevarshan.",
+  "permissions": ["storage", "offscreen", "clipboardWrite"],
+  "host_permissions": ["<all_urls>"],
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "action": {
+    "default_title": "Enable CP",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png" }
+  },
+  "commands": {
+    "snip": {
+      "suggested_key": { "default": "Alt+Shift+S" },
+      "description": "Unlock copy, paste, right-click, and text selection on restricted websites. Includes offline OCR for English and Tamil. By S.Shreevarshan."
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["bridge.js"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_about_blank": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["snip.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

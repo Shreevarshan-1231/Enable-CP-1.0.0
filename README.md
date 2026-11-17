@@ -53,7 +53,7 @@ Some websites and online code editors stop you from selecting text, using the ri
 
 Works on **Windows, macOS and Linux** in Chrome and other Chromium browsers (Edge, Brave, Opera, Vivaldi).
 
-1. Open the **Releases** page of this repository (right side of this page) and download **Enable-CP-v2.zip**, then unzip it.
+1. Open the **Releases** page of this repository (right side of this page) and download **Enable-CP-v1.0.0.zip**, then unzip it.
    *(Or click **Code > Download ZIP** on this page and unzip it.)*
 2. Open `chrome://extensions` (in Edge: `edge://extensions`) and turn on **Developer mode**.
 3. Click **Load unpacked** and choose the unzipped folder, the one that contains `manifest.json`.

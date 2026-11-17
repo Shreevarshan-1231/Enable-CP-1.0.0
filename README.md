@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img alt="Version" src="https://img.shields.io/badge/version-2-2563eb">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-2563eb">
   <img alt="Manifest V3" src="https://img.shields.io/badge/Manifest-V3-f97316">
   <img alt="Browsers" src="https://img.shields.io/badge/Chrome%20%C2%B7%20Edge%20%C2%B7%20Brave-supported-16a34a">
   <img alt="Data collected" src="https://img.shields.io/badge/data%20collected-none-16a34a">
